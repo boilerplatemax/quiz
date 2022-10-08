@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import Quiz from './Quiz'
+import Results from './Results'
 const questions=[
     {
         id:0,
