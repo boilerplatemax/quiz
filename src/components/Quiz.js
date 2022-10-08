@@ -1,11 +1,10 @@
-import React,{useState,useEffect} from 'react'
+import React from 'react'
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { v4 as uuidv4 } from 'uuid';
 
-export default function Quiz({questions, setQuizPage, quizPage, score, setScore}) {
-  const [a, setA]=useState(0)
+export default function Quiz({questions, setQuizPage, quizPage}) {
   const currentQuestion=questions[quizPage]
 
 
