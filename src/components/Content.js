@@ -31,15 +31,4 @@ const [quizPage, setQuizPage]=useState(0)
   
   )
 }
-
-
-    function Results({}) {
-      return (<div className='results'>
-    </div>);
-    }
-  
-    function undefined({}) {
-      return (<div className='results'>
-    </div>);
-    }
   
