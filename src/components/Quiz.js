@@ -1,6 +1,29 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import { v4 as uuidv4 } from 'uuid';
 
-export default function Quiz({questions, setQuizPage, quizPage}) {
+export default function Quiz({questions, setQuizPage, quizPage, score, setScore}) {
+  const [a, setA]=useState(0)
+  const currentQuestion=questions[quizPage]
+
+
+  function checkboxHandler(checked, answer){
+    if(checked){
+      console.log(answer)
+    }
+  }
+  function nextQuizePageHandler(){
+    setQuizPage(quizPage=>quizPage+1)
+    manageScoreHandler()
+  }
+  function manageScoreHandler(answers){
+  if(currentQuestion.correctAnswers.length){
+    console.log('arrays are same length')
+  }
+
+  }
   return (
     <div className='quiz'>
     <div className='question'>
@@ -8,18 +31,14 @@ export default function Quiz({questions, setQuizPage, quizPage}) {
     </div>
     <div className='answers'>
     Select All that apply:
-    <div><input type="checkbox" name="check-1" value="check-1" id="check-1"/>
-    <label for="check-1">{questions[quizPage].answers[0]}</label></div>
-    <div><input type="checkbox" name="check-2" value="check-2" id="check-2"/>
-    <label for="check-2">{questions[quizPage].answers[1]}</label></div>
-    <div><input type="checkbox" name="check-3" value="check-3" id="check-3"/>
-    <label for="check-3">{questions[quizPage].answers[2]}</label></div>
-    <div><input type="checkbox" name="check-3" value="check-3" id="check-3"/>
-    <label for="check-3">{questions[quizPage].answers[3]}</label></div>
-    {/*map our answers*/}
+    <FormGroup>
+      {currentQuestion.answers.map(answer=>{
+        return(<div><FormControlLabel key={uuidv4()} label={answer} value={answer} control={<Checkbox onChange={(e)=>checkboxHandler(e.target.checked, e.target.value)}/>} /></div>)
+      })}
+    </FormGroup>
     </div>
     
-    <button className='btn__submit' onClick={()=>setQuizPage(quizPage=>quizPage+1)}>submit</button>
+    <button className='btn__submit' onClick={nextQuizePageHandler}>submit</button>
     </div>
   )
 }

@@ -9,7 +9,8 @@ const questions=[
         src:'',
         correctAnswers:[2],
         answerType:'single',
-        difficulty:'easy'
+        difficulty:'easy',
+        userAnswers:[]
     }
     ,
     {
@@ -19,15 +20,20 @@ const questions=[
         src:'',
         correctAnswers:['Python','Java'],
         answerType:'multiple',
-        difficulty:'easy'
+        difficulty:'easy',
+        userAnswers:[]
     }
 ]
+const maxQuestions = questions.length
 export default function Content() {
 const [quizPage, setQuizPage]=useState(0)
+const [score,setScore]=useState(maxQuestions)
   return (
     <>
-        <Quiz questions={questions} quizPage={quizPage}setQuizPage={setQuizPage}/>
+        {quizPage<maxQuestions?
+        <Quiz questions={questions} quizPage={quizPage}setQuizPage={setQuizPage} score={score} setScore={setScore}/>:
         <Results/>
+        }
     </>
   
   )
