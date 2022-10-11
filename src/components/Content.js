@@ -4,10 +4,10 @@ import Results from './Results'
 const questions=[
     {
         id:0,
-        question: 'What is 1+1?',
-        answers:[3,4,5,2],
-        src:'',
-        correctAnswers:[2],
+        question: 'Which of these factors do not contribute to the drying of wood (for the purpose of finding dry parts of a bow-drill fire-making kit)?',
+        answers:['Being on the south side of trees','Branches being exposed to sun and wind','Branches high up in a tree','Branches being covered in moss'],
+        src:'https://stories.freepiklabs.com/storage/23283/beach-lifeguard-bro-2863.png',
+        correctAnswers:['Branches being covered in moss'],
         answerType:'single',
         difficulty:'easy',
         userAnswers:[]
@@ -29,12 +29,12 @@ export default function Content() {
 const [quizPage, setQuizPage]=useState(0)
 const [score,setScore]=useState(maxQuestions)
   return (
-    <>
+    <div className='content'>
         {quizPage<maxQuestions?
         <Quiz questions={questions} quizPage={quizPage}setQuizPage={setQuizPage} score={score} setScore={setScore}/>:
-        <Results/>
+        <Results score={score} maxQuestions={maxQuestions}/>
         }
-    </>
+    </div>
   
   )
 }

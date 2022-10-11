@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Results() {
+export default function Results({score, maxQuestions}) {
   return (
-    <div>Results</div>
+    <div>You scored {`${score}/${maxQuestions}`}</div>
   )
 }
