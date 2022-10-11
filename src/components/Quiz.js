@@ -1,15 +1,9 @@
 import React,{useState, useEffect} from 'react'
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import { v4 as uuidv4 } from 'uuid';
 
 export default function Quiz({questions, setQuizPage, quizPage, setScore, score}) {
   const currentQuestion=questions[quizPage]
   const [answers, setAnswers] = useState([])
-  useEffect(()=>{
-    console.log('answers'+answers)
-  },[answers])
+
   function checkboxHandler(e){
     const answer = e.target.value
     
@@ -17,7 +11,7 @@ export default function Quiz({questions, setQuizPage, quizPage, setScore, score}
       setAnswers([...answers,answer])
     }
     else{
-      setAnswers(answers.filter(a=>a!=answer))
+      setAnswers(answers.filter(a=>a!==answer))
     }
 
   }
@@ -45,7 +39,7 @@ export default function Quiz({questions, setQuizPage, quizPage, setScore, score}
   return (
     <div className='quiz'>
       <div className='quiz__img-holder'>
-      <img src={currentQuestion.src} className='quiz__img'/>
+      <img src={currentQuestion.src} className='quiz__img' alt={currentQuestion.question}/>
       </div>
       
     <div className='quiz__question'>
