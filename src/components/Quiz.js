@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState} from 'react'
 
 export default function Quiz({questions, setQuizPage, quizPage, setScore, score}) {
   const currentQuestion=questions[quizPage]
