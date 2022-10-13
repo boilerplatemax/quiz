@@ -1,0 +1,15 @@
+export const img0 = require('../images/img0.png');
+export const img1 = require('../images/img1.png');
+export const img2 = require('../images/img2.png');
+export const img3 = require('../images/img3.png');
+export const img4 = require('../images/img4.png');
+export const img5 = require('../images/img5.png');
+export const img6 = require('../images/img6.png');
+export const img7 = require('../images/img7.png');
+export const img8 = require('../images/img8.png');
+export const img9 = require('../images/img9.png');
+export const img10 = require('../images/img10.png');
+export const img11 = require('../images/img11.png');
+export const img12 = require('../images/img12.png');
+export const img13 = require('../images/img13.png');
+export const img14 = require('../images/img14.png');

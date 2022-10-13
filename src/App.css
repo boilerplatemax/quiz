@@ -1,11 +1,12 @@
 
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.correct{
+  background-color: rgb(193, 247, 193)!important;
+}
+.incorrect{
+  background-color: rgb(253, 167, 152)!important;
 }
 .App-title{
-
   text-align: center;
   font: 1.5rem sans-serif;
 }
@@ -50,8 +51,6 @@
   justify-content: center;
   background-color: rgb(167, 228, 252);
   border-radius: 10px;
-
-  
 }
 .quiz__img{
   margin-left: auto;
@@ -73,11 +72,9 @@
   margin-bottom: 30px;
 }
 .quiz__answer-checkbox{
-
   height: 25px;
   width: 25px;
   background-color: #eee;
-
 }
 
 .results__header{
@@ -94,10 +91,8 @@
   padding: 20px 0;
 }
 .results__question-icon{
-
   display: flex;
   align-items: center;
-
 }
 .results__answer{
   font-size: 1.25rem;
@@ -105,7 +100,6 @@
   color:black;
   background-color: rgb(255, 255, 255);
   border-top: 1px solid rgb(216, 210, 210);
-
 }
 .results__answer-correct{
   background-color: lightgreen;
@@ -115,11 +109,4 @@
 }
 .results__accordion{
   margin-bottom: 20px;
-}
-
-.correct{
-  background-color: rgb(193, 247, 193)!important;
-}
-.incorrect{
-  background-color: rgb(253, 167, 152)!important;
 }
