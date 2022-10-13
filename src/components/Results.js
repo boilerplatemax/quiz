@@ -59,7 +59,7 @@ export default function Results({score, maxQuestions, questions, submittedAnswer
               <AccordionDetails>
           <Typography>
           {answer}
-          {question.correctAnswer==answer&&<div className='results__comment'><em>{question.comment}</em></div>}
+          {question.correctAnswer===answer&&<div className='results__comment'><em>{question.comment}</em></div>}
           </Typography>
         </AccordionDetails>
             
