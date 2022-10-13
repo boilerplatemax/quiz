@@ -1,0 +1,213 @@
+[{
+    "id":0,
+    "question": "Which list of survival needs seems to be prioritized in the correct order?",
+    "answers":[
+    "Locate Water, build shelter, address injuries, build fire, locate food",
+    "Address injuries, build shelter, find food, find water, build fire",
+    "Locate food, locate water, build shelter, build fire, address injuries",
+    "Address injuries, build shelter, build fire, locate water, locate food"],
+    "correctAnswer":"Address injuries, build shelter, build fire, locate water, locate food",
+    "useAnswer":"",
+    "comment":"Refer to the Rule of 3's!",
+    "difficulty":"easy"
+
+}
+,
+{
+    "id":1,
+    "question": "By the 'Rule of 3's', without Shelter and/or fire, you could die in as little as:",
+    "answers":[
+    "Three Minutes",
+    "Three Hours",
+    "Three Days",
+    "Three Weeks"],
+    "correctAnswer":"Three Hours",
+    "useAnswer":"",
+    "comment":"Exposure can kill very quickly, especially in cold, wet climates!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":2,
+    "question": "The best food sources available in the wilderness are:",
+    "answers":[
+    "Mushrooms, moss and fungal growth",
+    "Small, green leafy plants",
+    "Insects and small furry animals",
+    "Grasses and the bark of young trees"],
+    "correctAnswer":"Insects and small furry animals",
+    "useAnswer":"",
+    "comment":"There are many, many poisonous plants, but almost all fur bearing mammals and insects (6 legs) are safe to eat!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":3,
+    "question": "By the 'Rule of 3's', without addressing Medical Emergencies, you could die in as little as:",
+    "answers":[
+    "Three Minutes",
+    "Three Hours",
+    "Three Days",
+    "Three Weeks"],
+    "correctAnswer":"Three Minutes",
+    "useAnswer":"",
+    "comment":"Heavy bleeding and other injuries can kill you very quickly, and are your number one concern!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":4,
+    "question": "The best and most efficient tool in a survival kit for quickly building fire is:",
+    "answers":[
+    "A small disposable Bic lighter",
+    "A hollow knife handle full of waterproof matches",
+    "Flint and steel",
+    "A knife with which you can make a bow drill to start your fires"],
+    "correctAnswer":"A small disposable Bic lighter",
+    "useAnswer":"",
+    "comment":"A Bic lighter can start a hell of a lot more fires than matches. It's quick and easy to use, and therefore the best tool!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":5,
+    "question": "A good way to procure water is to:",
+    "answers":[
+    "Cut up a bunch of plants, squeeze out the sap and drink it",
+    "Make a divining rod from a forked stick, walk around until the stick dips, then dig in that spot",
+    "Kill some game and drink the blood",
+    "Walk downhill"],
+    "correctAnswer":"Walk downhill",
+    "useAnswer":"",
+    "comment":"Water flows downhill and collects in valleys and low areas. Go there to find it!",
+    "difficulty":"easy"
+}
+
+,
+{
+    "id":6,
+    "question": "By the 'Rule of 3's', without food, you could die in as little as:",
+    "answers":[
+    "Three Minutes",
+    "Three Hours",
+    "Three Days",
+    "Three Weeks"],
+    "correctAnswer":"Three Weeks",
+    "useAnswer":"",
+    "comment":"Food is your LAST priority!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":7,
+    "question": "The first thing you should do if you want to build a fire is:",
+    "answers":[
+    "chop down several trees to provide logs for your fire",
+    "make 3 piles of dry material sorted into tinder, twigs and firewood",
+    "take out your lighter and test all the materials around you to determine what will burn",
+    "Rub two sticks together vigorously for a few minutes to make a red-hot coal, then blow on it until you get a flame"],
+    "correctAnswer":"make 3 piles of dry material sorted into tinder, twigs and firewood",
+    "useAnswer":"",
+    "comment":"Always collect twice as much dry wood and tinder as you think you'll need before attempting to light it!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":8,
+    "question": "The key to building shelter from the cold is that:",
+    "answers":[
+    "it is so small that you can barely fit into it",
+    "it is located on the banks of a flowing stream",
+    "it is constructed from only dead plant matter so you don't have to kill any trees or plants",
+    "it is in a field so that it can be warmed by the sun"],
+    "correctAnswer":"it is so small that you can barely fit into it",
+    "useAnswer":"",
+    "comment":"The smaller your shelter, the better... your body heat will help to warm it!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":9,
+    "question": "The best way to render water safe to drink is:",
+    "answers":[
+    "Remove your tee shirt, sock or other cotton material, and use it to filter the water",
+    "Leave it out in the sunlight so that the sun's UV rays can kill any microorganisms",
+    "Boil it",
+    "Add green grass and leaves and allow the plants to naturally kill any microbes"],
+    "correctAnswer":"Boil it",
+    "useAnswer":"",
+    "comment":"Short of chemical treatment, the best way to make water safe to drink is boiling it!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":10,
+    "question": "You're hiking, and suddenly realize that you've become lost. Night is fast approaching and the weather is getting cold. Rain is starting to fall. The best thing to do is:",
+    "answers":[
+    "Choose a direction, and start jogging in hopes of finding civilization before the storm hits",
+    "Stop. Build a big fire, and await rescuers",
+    "Start collecting rainwater because you may need it later, and see if you can find some food to warm you up",
+    "Start looking for some shelter from the rain, as you dial 911 on your cell phone"],
+    "correctAnswer":"Start looking for some shelter from the rain, as you dial 911 on your cell phone",
+    "useAnswer":"",
+    "comment":"Being properly prepared means you have a cell phone, a radio or other means of communication!",
+    "difficulty":"easy"
+}
+
+,
+{
+    "id":11,
+    "question": "By the 'Rule of 3's', without water, you could die in as little as:",
+    "answers":[
+    "Three Minutes",
+    "Three Hours",
+    "Three Days",
+    "Three Weeks"],
+    "correctAnswer":"Three Days",
+    "useAnswer":"",
+    "comment":"Lack of water can kill in a few days, especially in hot, desert environments!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":12,
+    "question": "Which of the following is most correct?",
+    "answers":[
+    "A little blade can do everything that a big blade can, and is the best survival tool",
+    "A big blade can do everything that a little blade can, and is the best survival tool",
+    "Blade size doesn't really matter in a wilderness survival situation",
+    "A blade is useless in a wilderness survival situation"],
+    "correctAnswer":"A big blade can do everything that a little blade can, and is the best survival tool",
+    "useAnswer":"",
+    "comment":"A big blade CAN do everything a small blade can, but little blades cannot chop and are ineffective for trailblazing and other heavy tasks!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":13,
+    "question": "Upon finding yourself in a dangerous survival situation, the best thing to do is:",
+    "answers":[
+    "React immediately, and start doing whatever you think will help to take your mind off the situation",
+    "Start a fire to warm you up and signal for help",
+    "Remain calm, take inventory of what tools and information you have, and then prioritize your actions to meet your most important needs first",
+    "Sit down and then bend over so that your head is between your knees. Keep bending until you can kiss your ass goodbye"],
+    "correctAnswer":"Remain calm, take inventory of what tools and information you have, and then prioritize your actions to meet your most important needs first",
+    "useAnswer":"",
+    "comment":"Using your brain to determine the best course of action is always a good bet... and not just in survival situations!",
+    "difficulty":"easy"
+}
+,
+{
+    "id":14,
+    "question": "The most reliable natural navigation method is to:",
+    "answers":[
+    "Use the sun and stars to get your bearings",
+    "Determine North by the moss growth on tree trunks",
+    "Continue walking towards the moon in order to maintain a constant direction",
+    "Follow the tracks of local wildlife because animals have a good sense of direction"],
+    "correctAnswer":"Use the sun and stars to get your bearings",
+    "useAnswer":"",
+    "comment":" -Moss is highly unreliable, animals wander in circles, and the moon traverses the sky... the sun and stars are your best direction finders!",
+    "difficulty":"easy"
+}
+]

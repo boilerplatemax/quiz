@@ -1,7 +1,77 @@
 import React from 'react'
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Close from '@mui/icons-material/Close';
+import Check from '@mui/icons-material/Check';
 
-export default function Results({score, maxQuestions}) {
+export default function Results({score, maxQuestions, questions, submittedAnswers}) {
+  const isCorrect=(question)=>{
+    const answerAtIndex=submittedAnswers[question.id]
+    if(answerAtIndex===question.correctAnswer){
+      return true
+    }
+
+  }
+  const resultClassNameHandler=(question, answer)=>{
+    let className='results__answer'
+    if(question.correctAnswer===answer){
+      className+=' results__answer-correct'
+    }
+    else if(submittedAnswers[question.id]===answer){
+        className+=' results__answer-incorrect'
+    }
+    return className
+  }
   return (
-    <div>You scored {`${score}/${maxQuestions}`}</div>
+    <div>
+      
+      <div className='results__content'>
+      <div className='results__header'>
+      <h2>Review your score</h2>
+      <a href='/'><button className='btn btn-retake'>Retake the test</button></a>
+      <div className='results__score'><p>You scored {`${score}/${maxQuestions}`}</p></div>
+      
+      </div>
+      {questions.map(question=>{
+        return(
+        <div className='results__accordion'>
+          
+        <Accordion
+        className={isCorrect(question)?'correct results__collapse':'incorrect results__collapse'}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <div className='results__question'><Typography>{`Question ${question.id+1}: ${question.question}`}</Typography><div className='results__question-icon'>{isCorrect(question)?<><Check/>Correct</>:<><Close/>incorrect</>}</div></div>
+          
+        </AccordionSummary>
+        
+      
+        <div key={question.id} className='results__answers'>
+          {question.answers.map(answer=>{
+            return(
+              <div key={answer} className={resultClassNameHandler(question,answer)}>
+                
+              <AccordionDetails>
+          <Typography>
+          {answer}
+          {question.correctAnswer==answer&&<div className='results__comment'><em>{question.comment}</em></div>}
+          </Typography>
+        </AccordionDetails>
+            
+              
+            </div>)
+          })}
+        </div>
+        </Accordion>
+        </div>
+        )
+      })}
+      </div>
+    </div>
   )
 }

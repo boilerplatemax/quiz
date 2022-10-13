@@ -1,34 +1,54 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
+import img0 from '../images/img0.png'
+import img1 from '../images/img1.png'
+import img2 from '../images/img2.png'
+import img3 from '../images/img3.png'
+import img4 from '../images/img4.png'
+import img5 from '../images/img5.png'
+import img6 from '../images/img6.png'
+import img7 from '../images/img7.png'
+import img8 from '../images/img8.png'
+import img9 from '../images/img9.png'
+import img10 from '../images/img10.png'
+import img11 from '../images/img11.png'
+import img12 from '../images/img12.png'
+import img13 from '../images/img13.png'
+import img14 from '../images/img14.png'
 
-export default function Quiz({questions, setQuizPage, quizPage, setScore, score}) {
+const images = [
+  img0, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14
+]
+
+export default function Quiz(props) {
+  const {questions, setQuizPage, quizPage, setScore, setSubmittedAnswers, submittedAnswers} = props
   const currentQuestion=questions[quizPage]
-  const [answers, setAnswers] = useState([])
-
-  function checkboxHandler(e){
+  const [userAnswer, setUserAnswer] = useState('')
+  useEffect(()=>{
+    setUserAnswer('')
+  },[quizPage])
+  
+  const checkboxHandler=e=>{
     const answer = e.target.value
-    
-    if(e.target.checked){
-      setAnswers([...answers,answer])
-    }
-    else{
-      setAnswers(answers.filter(a=>a!==answer))
-    }
+    setUserAnswer(answer)
 
   }
-  function nextQuizePageHandler(){
+  const nextQuizePageHandler=()=>{
+    
+    if(userAnswer===''){return}
     manageScoreHandler()
+    setSubmittedAnswers([...submittedAnswers,userAnswer])
     setQuizPage(quizPage=>quizPage+1)
     uncheck()
-    setAnswers([])
+    setUserAnswer('')
   }
   function manageScoreHandler(){
   //see if arrays are same length
-  if(currentQuestion.correctAnswers.length===answers.length){
+
     //see if arrays contain same answers
-    if(JSON.stringify(currentQuestion.correctAnswers.sort()) === JSON.stringify(answers.sort())){
+    if(currentQuestion.correctAnswer===userAnswer){
       return
     }
-  }
+  
   setScore(score=>score-1)
 
 
@@ -39,19 +59,18 @@ export default function Quiz({questions, setQuizPage, quizPage, setScore, score}
   return (
     <div className='quiz'>
       <div className='quiz__img-holder'>
-      <img src={currentQuestion.src} className='quiz__img' alt={currentQuestion.question}/>
+      <img src={images[currentQuestion.id]} className='quiz__img' alt={currentQuestion.question}/>
       </div>
       
     <div className='quiz__question'>
     {questions[quizPage].question}
     </div>
     <div className='quiz__answers'>
-    <div>Select <b>all</b> that apply:</div>
     <form id='answerForm'>
       {currentQuestion.answers.map(answer=>{
-        return(<div key={answer} className='quiz__answer'>
-          
-          <input type="checkbox" id="html" name={answer} value={answer} className='quiz__answer-checkbox' onChange={checkboxHandler}/>
+        return(
+        <div key={answer} className='quiz__answer'>
+          <input type="radio" id="html" name='answer-group' value={answer} className='quiz__answer-checkbox' onChange={checkboxHandler}/>
           <label htmlFor="html" className='quiz__answer-label'>{answer}</label>
         </div>)
       })}

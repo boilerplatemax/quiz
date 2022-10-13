@@ -4,7 +4,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+.App-title{
 
+  text-align: center;
+  font: 1.5rem sans-serif;
+}
 .content {
   background-color: #ffffff;
   min-height: 100vh;
@@ -13,6 +17,7 @@
   align-items: center;
   justify-content:center;
   font-size: calc(10px + 2vmin);
+  margin: 30px;
 
 }
 .btn{
@@ -20,16 +25,21 @@
   cursor: pointer;
   background-color: transparent;
   border: transparent;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 .btn__submit{
   color: white;
   background-color: rgb(10, 108, 219);
   
-  padding: 10px 20px;
-  border-radius: 20px;
 }
 .btn__submit:hover{
   background-color: rgb(122, 176, 236);
+}
+.btn-retake{
+  background-color: tomato;
+  color: white;
+
 }
 .quiz__question{
   font-size: 1.5rem;
@@ -46,6 +56,7 @@
 .quiz__img{
   margin-left: auto;
   margin-right: auto;
+  max-width: 500px;
   
 }
 .quiz{
@@ -57,11 +68,58 @@
   font-size: 1.3rem;
   text-align: left;
 }
-
+.quiz__answer{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .quiz__answer-checkbox{
 
   height: 25px;
   width: 25px;
   background-color: #eee;
 
+}
+
+.results__header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.results__comment{
+  font-size: 1.0rem;
+}
+.results__question{
+  font-size: 1.25rem;
+  padding: 20px 0;
+}
+.results__question-icon{
+
+  display: flex;
+  align-items: center;
+
+}
+.results__answer{
+  font-size: 1.25rem;
+  padding: 20px 10px;
+  color:black;
+  background-color: rgb(255, 255, 255);
+  border-top: 1px solid rgb(216, 210, 210);
+
+}
+.results__answer-correct{
+  background-color: lightgreen;
+}
+.results__answer-incorrect{
+  background-color: tomato;
+}
+.results__accordion{
+  margin-bottom: 20px;
+}
+
+.correct{
+  background-color: rgb(193, 247, 193)!important;
+}
+.incorrect{
+  background-color: rgb(253, 167, 152)!important;
 }
